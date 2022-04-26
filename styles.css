@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+    background-color: #E8630A;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar {
+    width: 100vw;
+    
+    background-color: #E8630A;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 0.4rem;
+    
+}
+
+#quote-para {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding-top: 100px;
+}
+
+.inner-main {
+    background-color: #E8630A;
+    width: 90vw;
+    height: 92vh;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo {
+    width: 150px;
+    border: 1px solid black;
+    margin: 40px;
+}
+
+.invert-pic {
+    width: 150px;
+    /* border: 1px solid black; */
+    margin: 40px;
+    background-image: url(./images/CLAM\ RECORDS_n_boo_nb.jpg);
+    display: none;
+    transition: 0.5s ease-in-out;
+}
+
+.logo:hover {
+
+
+
+
+    
+}
+
+/* .logo:hover:before {
+    -webkit-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    transform: scaleX(1);
+} */
+
+.BUTTON_WXJ {
+    background: #E8630A;
+    background-image: -webkit-linear-gradient(top, #FCD900, #E4B779);
+    background-image: -moz-linear-gradient(top, #E8630A, #E4B779);
+    background-image: -ms-linear-gradient(top, #E8630A, #E4B779);
+    background-image: -o-linear-gradient(top, #E8630A, #E4B779);
+    background-image: -webkit-gradient(to bottom, #FCD900, #E4B779);
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 5px;
+    color: #000000;
+    font-family: Helvetica;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 8px;
+    -webkit-box-shadow: 0 1px 20px 0 #000000; 
+    -moz-box-shadow: 0 1px 20px 0 #000000; 
+    box-shadow: 0 1px 20px 0 #000000;
+    text-shadow: 1px 1px 20px #000000;
+    border: solid #000000 2px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+ }
+ 
+ .BUTTON_WXJ:hover {
+    border: solid #edbb33 1px;
+    background: #f0dc2e;
+    /* background-image: -webkit-linear-gradient(top, #BCD825, #00C7FC);
+    background-image: -moz-linear-gradient(top, #BCD825, #00C7FC);
+    background-image: -ms-linear-gradient(top, #BCD825, #00C7FC);
+    background-image: -o-linear-gradient(top, #BCD825, #00C7FC);
+    background-image: -webkit-gradient(to bottom, #BCD825, #00C7FC); */
+    transition: ease-in-out;
+
+    text-decoration: none;
+ }

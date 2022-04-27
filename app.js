@@ -66,3 +66,13 @@ const func1 = () => {
 
 }
 
+const myFunction = () => {
+    console.log("balls")
+    let x = document.getElementById("myTopNav");
+    if (x.className === "navbar") {
+        x.className += " responsive";
+    } else {
+        x.className = "navbar"
+    }
+};
+

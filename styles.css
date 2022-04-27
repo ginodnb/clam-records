@@ -26,10 +26,29 @@ body {
     justify-content: space-evenly;
 }
 
+.navbar a:hover {
+    background-color: #035397;
+    /* color: black; */
+}
+
+.navbar .icon {
+    display: none;
+    font-size: 2rem;
+}
+
+.navbar a {
+    margin-top: 1rem;
+}
+
+.navbar a.active {
+    background-color: #035397;
+    color: white;
+}
+
 a {
     text-decoration: none;
     color: white;
-    letter-spacing: 0.4rem;
+    letter-spacing: 0.2rem;
     
 }
 
@@ -43,7 +62,7 @@ a {
 .inner-main {
     background-color: #E8630A;
     width: 90vw;
-    height: 92vh;
+    height: 96vh;
     border: 3px solid black;
     display: flex;
     align-items: center;
@@ -59,26 +78,12 @@ a {
 
 .invert-pic {
     width: 150px;
-    /* border: 1px solid black; */
     margin: 40px;
     background-image: url(./images/CLAM\ RECORDS_n_boo_nb.jpg);
     display: none;
     transition: 0.5s ease-in-out;
 }
 
-.logo:hover {
-
-
-
-
-    
-}
-
-/* .logo:hover:before {
-    -webkit-transform: scaleX(1);
-    -ms-transform: scaleX(1);
-    transform: scaleX(1);
-} */
 
 .BUTTON_WXJ {
     background: #E8630A;
@@ -113,8 +118,38 @@ a {
     background-image: -moz-linear-gradient(top, #BCD825, #00C7FC);
     background-image: -ms-linear-gradient(top, #BCD825, #00C7FC);
     background-image: -o-linear-gradient(top, #BCD825, #00C7FC);
-    background-image: -webkit-gradient(to bottom, #BCD825, #00C7FC); */
+    background-image: -webkit-gradient(to bottom, #BCD825, #00C7FC);
     transition: ease-in-out;
 
     text-decoration: none;
- }
+ }; */
+}
+
+
+
+@media screen and (max-width: 700px) {
+.navbar a:not(:first-child) {display: none;}
+.navbar a.icon {
+    align-self: flex-end;
+    display: flex;
+}
+    }
+
+@media screen and (max-width: 700px) {
+    .navbar.responsive {
+        position: absolute;
+        display: flex; 
+        flex-direction: column;
+    }
+    .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-right: 2rem;
+    }
+}
+.navbar.responsive a {
+    float: right;
+    display: block;
+    text-align: left;
+}

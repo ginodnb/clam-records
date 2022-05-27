@@ -45,8 +45,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    position: fixed;
+    position: sticky;
     border-bottom: 2px solid white;
+    z-index: 1;
 }
 
 .navbar a:hover {
@@ -104,7 +105,8 @@ a {
     width: 100px;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+
     
 }
 
@@ -113,8 +115,14 @@ a {
 }
 
 .landing-link {
-    width: 380px;
-    align-items: flex-end;
+
+
+    justify-content: center;
+    max-width: 300px;
+
+
+
+
 
 }
 .release-pic {
@@ -135,6 +143,8 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+
+
     
 
 }
@@ -145,24 +155,38 @@ a {
 
 .artwork {
     width: 100%;
-    height: 600px;
-    object-fit: cover;
-    margin-top: 450px;
-    margin-bottom: 40px;
+    /* height: 500px; */
+    /* margin-top: 450px; */
 
+    
+    object-fit: cover;
+
+    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+
+    display: block;
+
+}
+
+#cunt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .release-pic-landing {
     width: 88vw;
     height: 88vh;
-    display: flex;
+
+
     margin: auto;
     justify-content: center;
     align-items: center;
     padding: 5px;
-    object-fit: cover;
-    flex-direction: column;
+
     
 }
 
@@ -194,7 +218,7 @@ a {
     /* background-image: url(./images/CLAM\ RECORDS_n_boo_nb.jpg); */
     display: flex;
     animation: appear 1s 0s;
-    margin-top: 60px;
+
 }
 
 .content-holder a {
@@ -271,6 +295,9 @@ a {
         position: absolute;
         display: flex; 
         flex-direction: column;
+        z-index: 1;
+        position: sticky;
+
     }
     .navbar.responsive a.icon {
         position: absolute;
@@ -283,4 +310,6 @@ a {
     float: right;
     display: block;
     text-align: left;
+    z-index: 1;
+    position: sticky;
 }

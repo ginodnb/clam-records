@@ -145,6 +145,12 @@ a {
 
 .content-holder p {
     padding: 5px;
+    transition: all .2s ease-in-out;
+}
+
+.content-holder p:hover {
+    transform: scale(1.1);
+
 }
 
 .logo-holder p {

@@ -22,7 +22,9 @@ body {
     background-color: #E8630A;
     width: 92vw;
     height: 4000px;
-    border: 2px solid rgb(255, 255, 255);
+    border-left: 2px solid rgb(255, 255, 255);
+    border-right: 2px solid rgb(255, 255, 255);
+    border-top: 0.5px solid white;
     border-radius: 7px;
     display: flex;
     align-items: center;
@@ -127,14 +129,45 @@ a {
 }
 .release-pic {
     width: 300px;
-    height: 300px;
+    height: 335px;
     display: flex;
-    margin: auto;
+    /* margin: auto; */
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    /* margin: 10px; */
     object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: all .2s ease-in-out;
+    background-color: #FC4F4F;
+
     
+}
+
+.content-holder p {
+    padding: 5px;
+}
+
+.logo-holder p {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+}
+
+.logo-holder img {
+    margin: auto;
+    
+}
+
+.release-pic:hover {
+    transform: scale(1.1);
+
+}
+
+.release-pic a i {
+    padding-bottom: 0.2px;
+    padding-left: 2px;
+
+
 }
 
 .content-holder-landing {

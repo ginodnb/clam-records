@@ -49,7 +49,7 @@
                     </div>
 
                     <div id="cunt">
-                    <a href="https://ffm.to/yv7kqjo/spotify" target="_blank">
+                    <a id="spotify-btn" onclick="spotty()" href="https://ffm.to/yv7kqjo/spotify" target="_blank">
                         <img class="landing-link" src="images/spotify landing.png" alt="http://www.higheq.net/splash/FR002/images/spotify.png">
                     </a>
                     <br>
@@ -100,6 +100,12 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '203513021838628');
     fbq('track', 'PageView');
+  </script>
+  <script>
+      (spotty ()={
+          return:
+          fbq('trackCustom')
+      });
   </script>
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=203513021838628&ev=PageView&noscript=1"

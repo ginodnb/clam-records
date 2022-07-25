@@ -19,7 +19,7 @@ body {
 }
 
 .inner-main {
-    background-color: #E8630A;
+    background-color: #E6D5B8;
     width: 92vw;
     height: 4000px;
     border-left: 2px solid rgb(255, 255, 255);
@@ -139,13 +139,19 @@ a {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     transition: all .2s ease-in-out;
     background-color: #FC4F4F;
+    margin: 25px;
 
     
+}
+
+.content-holder {
+    display: flex;
 }
 
 .content-holder p {
     padding: 5px;
     transition: all .2s ease-in-out;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .content-holder p:hover {
@@ -235,6 +241,7 @@ a {
     margin: 40px;
     animation: appear 1s 0s;
     margin-top: 60px;
+    padding: 10px;
 }
 
 #gallery {
@@ -344,7 +351,12 @@ a {
         top: 0;
         margin-right: 2rem;
     }
-}
+    
+        .content-holder {
+            display: block;
+        }
+    }
+
 .navbar.responsive a {
     float: right;
     display: block;
@@ -352,3 +364,4 @@ a {
     z-index: 1;
     position: sticky;
 }
+

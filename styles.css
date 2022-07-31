@@ -105,10 +105,10 @@ a {
 }
 
 .highlight {
-    width: 82vw;
+    width: 90vw;
     height: 82vh;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
     
 }
 
@@ -341,10 +341,20 @@ a {
     align-self: flex-end;
     display: flex;
 }
+.highlight {
+    object-fit: cover;
+    max-height: 500px;
+
+}
+.inner-main .logo {
+    width: 100px;
+margin: 10px;
+}
     }
     .invert-pic {
         width: 130px;
     }
+
 
 @media screen and (max-width: 700px) {
     .navbar.responsive {

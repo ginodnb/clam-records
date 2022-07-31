@@ -20,7 +20,7 @@
     <div class="navbar" id="myTopNav">
         <a href="./index.html" class="active">Home</a>
         <a href="./releases.html">Releases</a>
-        <a href="gallery.html">Gallery</a>
+        <a href="./gallery.html">Gallery</a>
         <a href="./contact.html">Contact</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
@@ -35,13 +35,48 @@
 
             <div class="inner-main">
 
-            <img class="logo" src="./images/CLAM RECORDS NO BG PS.png" alt="labellogo">
-            <h3>Out This Friday <a href="https://www.beatport.com/track/now-wait/16738499">(Pre-order now)</a></h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/NpR8MHqzC2A?clip=UgkxUfZI_F76QEjw38i6fsyeAM10TSeofBkM&amp;clipt=EMaFExjilBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <img class="highlight" src="./images/CLAM002 ART FINAL 2.png" alt="">
+<div class="logo-holder">
+    <img class="invert-pic" style="width: 60px; padding: 10px;" src="./images/CLAM RECORDS NO BG PS.png" alt="labellogo">
+    <p>LISTEN / DOWNLOAD</p>
+</div>
 
-            <!-- <button onclick="func1()" class="BUTTON_WXJ" type="submit">CLICK TO ENTER<a href="./home.html" ></a></button> -->
-            <p id="quote-para"></p>
+            <div class="content-holder-landing">
+                <div class="release-pic-landing">
+                    <div >
+                    <a href="#">
+                        <img class="artwork" src="./images/CLAM002 ART FINAL 2.png">
+                    </a>
+                    </div>
+
+                    <div id="cunt">
+                    <a id="spotify-btn" onclick="spotty()" href="http://open.spotify.com/album/29zLqmECn4j5RLalG5Mu1g" target="_blank">
+                        <img class="landing-link" src="images/spotify landing.png" alt="http://www.higheq.net/splash/FR002/images/spotify.png">
+                    </a>
+                    <br>
+                    <a href="https://www.beatport.com/track/now-wait/16738499" target="_blank">
+                        <img class="landing-link" src="images/beatport landing.png" alt="http://www.higheq.net/splash/FR002/images/beatport.png">
+                    </a>
+                    <br>
+                    <a href="https://music.apple.com/us/album/now-wait-single/1634959864?ls=1&app=itunes" target="_blank">
+                        <img class="landing-link"src="images/apple landing.png" alt="">
+                    </a>
+                    <br>
+                    <a href="https://www.junodownload.com/products/gino-now-wait/5678322-02/" target="_blank">
+                        <img class="landing-link"src="images/juno landing.png" alt="">
+                    </a>
+                    <p id="quote-para"></p>
+                </div>
+
+
+
+
+                </div>
+
+
+            </div>
+
+
+
 
             </div>
 
@@ -65,6 +100,12 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '203513021838628');
     fbq('track', 'PageView');
+  </script>
+  <script>
+      (spotty ()={
+          return:
+          fbq('trackCustom')
+      });
   </script>
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=203513021838628&ev=PageView&noscript=1"

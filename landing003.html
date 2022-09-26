@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Clam Records</title>
+</head>
+<body>
+    <div class="navbar" id="myTopNav">
+        <a href="./index.html" class="active">Home</a>
+        <a href="./releases.html">Releases</a>
+        <a href="./gallery.html">Gallery</a>
+        <a href="./contact.html">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+            </a>
+
+
+    </div>
+
+    <div class="main">
+
+
+
+            <div class="inner-main">
+
+<div class="logo-holder">
+    <img class="invert-pic" style="width: 60px; padding: 10px;" src="./images/CLAM RECORDS NO BG PS.png" alt="labellogo">
+    <p>LISTEN / DOWNLOAD</p>
+</div>
+
+            <div class="content-holder-landing">
+                <div class="release-pic-landing">
+                    <div >
+                    <a href="#">
+                        <img class="artwork" src="./images/clam003 ART FINAL.png">
+                    </a>
+                    </div>
+
+                    <div id="cunt">
+                    <a id="spotify-btn" onclick="spotty()" href="http://open.spotify.com/album/6BEzIwPSUjs2U0hyIFUEcL" target="_blank">
+                        <img class="landing-link" src="images/spotify landing.png" alt="http://www.higheq.net/splash/FR002/images/spotify.png">
+                    </a>
+                    <br>
+                    <a href="https://www.beatport.com/release/make-a-mess/3870702" target="_blank">
+                        <img class="landing-link" src="images/beatport landing.png" alt="http://www.higheq.net/splash/FR002/images/beatport.png">
+                    </a>
+                    <br>
+                    <a href="https://music.apple.com/us/album/make-a-mess-single/1645042240?ls=1&app=itunes" target="_blank">
+                        <img class="landing-link"src="images/apple landing.png" alt="">
+                    </a>
+                    <br>
+                    <a href="https://www.junodownload.com/products/clikvork-make-a-mess/5760301-02/" target="_blank">
+                        <img class="landing-link"src="images/juno landing.png" alt="">
+                    </a>
+                    <p id="quote-para"></p>
+                </div>
+
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+            </div>
+
+    </div>
+
+
+
+    
+</body>
+
+<script src="./app.js"></script>
+<!-- Meta Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '203513021838628');
+    fbq('track', 'PageView');
+  </script>
+  <script>
+      (spotty ()={
+          return:
+          fbq('trackCustom')
+      });
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=203513021838628&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+</html>

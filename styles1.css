@@ -276,6 +276,62 @@ a {
     padding: 5px;
 }
 
+.merch-holder {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: rgba(247, 254, 234, 0.457);
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+}
+
+.product-card-price {
+    /* background-color: rgba(247, 254, 234, 0.457); */
+    width: 200px;
+    padding: 15px;
+    display: flex;
+    border-radius: 0 10px 10px 0;
+}
+
+.product-card-price h2 {
+    padding-bottom: 20px;
+}
+
+.product-card-price p {
+    padding-bottom: 20px;
+}
+
+.product-card-price label {
+    padding: 5px;
+}
+
+.product-card-price a {
+    color: rgb(157, 130, 87);
+    letter-spacing: normal;
+    font-size: 12px;
+    align-self: center;
+    padding-top: 5px;
+}
+
+#button {
+    margin: 10px;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
 .invert-pic {
     width: 150px;
     margin: 40px;

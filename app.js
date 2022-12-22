@@ -76,3 +76,41 @@ const myFunction = () => {
     }
 };
 
+let clicker = document.querySelector("#tee");
+let backTee = document.querySelector("#back-tee")
+
+const doIt = () => {
+clicker.classList.toggle("other-tee")
+// clicker.classList.remove("shop-pics")
+// backTee.classList.toggle("shop-pics-back")
+// backTee.classList.toggle("tee")
+
+// backTee.classList.toggle("shop-pics")
+backTee.style = ("display: flex")
+}
+
+clicker.addEventListener("click", doIt)
+
+
+const reverse = () => {
+    clicker.classList.toggle("other-tee")
+    backTee.style = ("display: none")
+
+}
+
+backTee.addEventListener("click", reverse)
+
+
+
+// if (backTee.className = ("shop-pics")){
+//     backTee.classList.add("other-tee")
+//     console.log("shop-pics enabled")
+
+// } else if     (clicker.className = ("other-tee")){
+//     clicker.classList.add("back-tee")
+//     // clicker.classList.remove("other-tee")
+//     console.log("other tee is enabled")
+//     // clicker.classList.add("tee")
+// }
+
+

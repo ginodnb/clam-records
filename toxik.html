@@ -90,7 +90,7 @@
 
 <script src="./app.js"></script>
 <!-- Meta Pixel Code -->
-<script>
+<!-- <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -107,9 +107,112 @@
           return:
           fbq('trackCustom')
       });
-  </script>
+  </script> -->
+
+  
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=203513021838628&ev=PageView&noscript=1"
   /></noscript>
+
+
+
   <!-- End Meta Pixel Code -->
+
+  <script>
+    (function () {
+  // ---------- Helper: UUID v4 ----------
+  function uuidv4() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+      var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    });
+  }
+
+  // ---------- Load Meta Pixel ----------
+  (function (f, b, e, v, n, t, s) {
+    if (f.fbq) return; n = f.fbq = function () {
+      n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+    };
+    if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = [];
+    t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t, s);
+  }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js'));
+
+  fbq('init', '203513021838628'); // <-- replace
+  fbq('track', 'PageView');
+
+  // ---------- Generate event_id for deduplication ----------
+  var eventId = uuidv4();
+
+  // ---------- Send ViewContent after a short delay (helps filter bots) ----------
+  setTimeout(function () {
+    fbq('track', 'ViewContent', {
+      content_name: 'TRACK_SLUG_OR_NAME', // replace
+      content_type: 'music',
+      content_ids: ['TRACK_SLUG_OR_ID'], // optional
+      value: 0.00,
+      currency: 'GBP',
+      event_id: eventId
+    });
+
+    // Send same event to your server for Conversions API (dedupe)
+    // Make sure /pixel-event is reachable and configured on your server
+    fetch('/pixel-event', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        event_name: 'ViewContent',
+        event_id: eventId,
+        page: window.location.href,
+        user_data: {}, // optional: include hashed identifiers if available
+        custom_data: { content_name: 'TRACK_SLUG_OR_NAME' }
+      })
+    }).catch(function (err) {
+      console.warn('CAPI post failed:', err);
+    });
+  }, 900); // adjust between 800-1500ms if you want stricter filtering
+
+  // ---------- Optional: EngagedView custom event (fires after 5s or 50% scroll) ----------
+  (function () {
+    var engaged = false;
+    function sendEngaged() {
+      if (engaged) return;
+      engaged = true;
+
+      fbq('trackCustom', 'EngagedView', {
+        content_name: 'TRACK_SLUG_OR_NAME',
+        engaged_after_seconds: 5,
+        event_id: eventId
+      });
+
+      fetch('/pixel-event', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          event_name: 'EngagedView',
+          event_id: eventId,
+          page: window.location.href,
+          custom_data: { content_name: 'TRACK_SLUG_OR_NAME' }
+        })
+      }).catch(function () { /* ignore */ });
+    }
+
+    // After 2 seconds
+    setTimeout(sendEngaged, 2000);
+
+    // Or when scrolled 50% of page height
+    window.addEventListener('scroll', function () {
+      if (engaged) return;
+      var scrolled = window.scrollY + window.innerHeight;
+      var threshold = document.documentElement.scrollHeight * 0.5;
+      if (scrolled >= threshold) sendEngaged();
+    });
+  }());
+})();
+  </script>
+  
+  
+
+
 </html>
+
